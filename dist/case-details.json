@@ -1,0 +1,222 @@
+{
+  "4": {
+    "domain": "bedayaccpa.com",
+    "intro": "A healthcare platform with an established search presence, but room to turn its existing exposure into more organic clicks. The project combined search-result presentation, structured data and mobile experience improvements.",
+    "challenge": "The site was operating in a competitive medical search landscape. In the previous three-month period shown in Search Console, it recorded 53.6K clicks and 2.76M impressions, with a 1.9% CTR. The opportunity was not simply to chase more rankings: it was to improve how the site appeared in search while strengthening the experience after the click.",
+    "steps": [
+      [
+        "Improve the search-result message",
+        "Titles and meta descriptions were refined to better communicate the relevance of medical pages. This work targeted the gap between being shown in search and earning a click, rather than treating impressions alone as the goal."
+      ],
+      [
+        "Add relevant structured data",
+        "The published work included MedicalWebPage and FAQ structured data. The purpose was to describe page content more clearly to search engines. Implementation alone does not establish that a rich result appeared or caused the measured growth."
+      ],
+      [
+        "Address the mobile experience",
+        "The technical work addressed Largest Contentful Paint and Cumulative Layout Shift. These priorities focused on loading experience and layout stability, alongside the changes to search-result presentation."
+      ]
+    ],
+    "metrics": [
+      [
+        "Organic clicks",
+        "53.6K",
+        "109K"
+      ],
+      [
+        "Impressions",
+        "2.76M",
+        "5.06M"
+      ],
+      [
+        "CTR",
+        "1.9%",
+        "2.1%"
+      ],
+      [
+        "Average position",
+        "8.5",
+        "8.1"
+      ]
+    ],
+    "insight": "Clicks approximately doubled (+103%), while impressions grew by about 83%. CTR also increased by 0.2 percentage points. Together, these figures show that growth came with both greater visibility and a slightly stronger click-through rate; the comparatively small change in average position does not explain the whole story.",
+    "limit": "This is a before-and-after comparison, not a controlled experiment. The screenshot does not isolate the effect of each change or show enquiry, appointment or revenue outcomes.",
+    "lesson": "Look beyond rankings alone. When a site already has visibility, search-result presentation and on-site experience can be useful parts of the same improvement plan."
+  },
+  "2": {
+    "domain": "botsmsg.com",
+    "intro": "A technical recovery project for a software and automation website with very limited organic search activity. The focus was on removing discovery barriers and making commercial pages more relevant to the people searching for its solutions.",
+    "challenge": "The comparison starts at 31 organic clicks and 2.53K impressions over three months, with an average position of 24. The original case study identifies indexation barriers as a central issue. That made technical discovery a priority before relying on content alone to generate stronger search performance.",
+    "steps": [
+      [
+        "Audit crawl and discovery issues",
+        "A technical audit was used to identify crawl errors and barriers affecting indexation. The work focused on improving the ability of search engines to discover the site’s important pages. The source does not provide a page-by-page issue log, so specific fixes are not inferred here."
+      ],
+      [
+        "Refine the XML sitemap",
+        "The sitemap was optimized to support discovery. This formed part of the technical recovery work; submitting or updating a sitemap is a discovery signal, not a guarantee that every URL will be indexed."
+      ],
+      [
+        "Align commercial landing pages with intent",
+        "Landing-page content was refined around searches for automation and chatbot solutions. This connected the technical recovery with pages that better addressed what a prospective customer was looking for."
+      ]
+    ],
+    "metrics": [
+      [
+        "Organic clicks",
+        "31",
+        "652"
+      ],
+      [
+        "Impressions",
+        "2.53K",
+        "43.8K"
+      ],
+      [
+        "CTR",
+        "1.2%",
+        "1.5%"
+      ],
+      [
+        "Average position",
+        "24",
+        "6.8"
+      ]
+    ],
+    "insight": "The comparison records 621 additional clicks—approximately 21 times the starting total. Impressions expanded substantially and average position improved by 17.2 positions. This combination is consistent with a much stronger search presence following the recovery work.",
+    "limit": "The 652 figure is Search Console clicks, not GA4 sessions or leads. Average position of 6.8 is an aggregate across search appearances and does not mean every keyword ranks in the top ten.",
+    "lesson": "Fix discovery constraints and relevance together. Technical access gives useful pages a better opportunity to be found; intent alignment gives those pages a clearer reason to compete."
+  },
+  "3": {
+    "domain": "dr-kareemshliwa.com",
+    "intro": "A medical specialist’s website needed to establish visibility in a landscape occupied by larger healthcare providers. The project organized content around patient questions and connected related topics through internal links.",
+    "challenge": "The earlier three-month period shows 464 clicks and 30.8K impressions. For a specialist profile, the challenge was to build a useful search presence around its area of practice, rather than compete only on broad medical terms. The content approach focused on specific symptoms and procedure-related information needs.",
+    "steps": [
+      [
+        "Organize a specialty-focused topic map",
+        "The work developed topic clusters around the doctor’s specialty. Grouping related subjects gave the content a clearer structure and helped identify the relationships between individual pages."
+      ],
+      [
+        "Connect related content internally",
+        "Internal linking connected relevant pages within the topic structure. The aim was to support navigation and discovery, so that the site’s content functioned as a connected resource rather than a collection of isolated articles."
+      ],
+      [
+        "Address more specific patient searches",
+        "Content targeted longer, more specific symptom and procedure queries. These searches can represent different stages of a patient’s research, making relevance to the actual question an important part of the content approach."
+      ]
+    ],
+    "metrics": [
+      [
+        "Organic clicks",
+        "464",
+        "1.57K"
+      ],
+      [
+        "Impressions",
+        "30.8K",
+        "160K"
+      ],
+      [
+        "CTR",
+        "1.5%",
+        "1.0%"
+      ],
+      [
+        "Average position",
+        "12.7",
+        "12.1"
+      ]
+    ],
+    "insight": "Clicks increased by approximately 238% and impressions by approximately 419%. Visibility grew faster than clicks, while CTR fell from 1.5% to 1.0%. The outcome therefore shows wider search exposure and more clicks, but also identifies click-through performance as an area worth investigating.",
+    "limit": "The screenshot cannot establish why CTR fell. Changes in query mix, position and search-result presentation would need query-level investigation. It also does not show appointment bookings or independently verify medical authority.",
+    "lesson": "Read growth metrics together. A larger footprint can be a valuable result while still revealing the next optimization opportunity in CTR and query relevance."
+  },
+  "1": {
+    "domain": "rightnutritions.com",
+    "intro": "A new nutrition and supplements website needed to develop its organic search presence in a trust-sensitive category. The work combined evidence-supported content with an internal-linking structure connecting related content and products.",
+    "challenge": "The earlier comparison period has zero recorded clicks and impressions. That makes the objective establishing measurable visibility, rather than calculating percentage growth from a meaningful existing traffic base. The category also called for careful attention to the quality and support behind health-related content.",
+    "steps": [
+      [
+        "Focus on evidence-supported content",
+        "The published approach emphasized scientifically supported content and trust considerations. This meant treating the usefulness and support for the information as part of the optimization work, rather than relying only on keyword coverage."
+      ],
+      [
+        "Build a hub-and-spoke structure",
+        "Related content was organized around broader topics, with links connecting the hub and supporting pages. This approach created a more coherent structure for users exploring the subject."
+      ],
+      [
+        "Connect relevant content and product pages",
+        "Internal links connected related information with product pages. The intent was to help users and search engines discover relevant pages within the same subject area, without treating every article as a standalone destination."
+      ]
+    ],
+    "metrics": [
+      [
+        "Organic clicks",
+        "0",
+        "434"
+      ],
+      [
+        "Impressions",
+        "0",
+        "23.3K"
+      ],
+      [
+        "CTR",
+        "0%",
+        "1.9%"
+      ],
+      [
+        "Average position",
+        "No impressions",
+        "7.6"
+      ]
+    ],
+    "insight": "The site established 434 clicks and 23.3K impressions in the later three-month period, with a 1.9% CTR. Average position was 7.6 across the recorded search appearances. These provide an initial measurable search baseline for subsequent optimization.",
+    "limit": "Percentage growth is not meaningful when the starting count is zero. The screenshot does not demonstrate an instant ranking timeline, prove that all keywords rank on page one, or establish sales performance.",
+    "lesson": "For a new website, first establish a measurable baseline. Evaluate the relevance of visibility and clicks before making broad claims about growth or commercial success."
+  },
+  "0": {
+    "domain": "souq-usedfurniture.com",
+    "intro": "A local used-furniture website competing for searches with buying and selling intent. The work connected category-page relevance with mobile usability and server-response improvements.",
+    "challenge": "The previous three-month period recorded 79 clicks and 4.58K impressions, with average position 39.7. The original case study describes strong local competition and difficulty reaching high-intent transactional searches. The focus was to make category pages more useful for those searches and improve the mobile experience.",
+    "steps": [
+      [
+        "Prioritize transactional category searches",
+        "Category pages were optimized around buy/sell intent. This focused the work on what a user trying to transact would need, rather than treating every search as a general informational query."
+      ],
+      [
+        "Improve server response",
+        "Technical improvements addressed server response times as part of the site-experience work. The source does not include a before-and-after speed measurement, so no speed improvement percentage is claimed."
+      ],
+      [
+        "Refine the mobile user experience",
+        "The mobile interface was streamlined to support easier browsing. This complemented the work on category relevance, aligning the search destination with the needs of local visitors."
+      ]
+    ],
+    "metrics": [
+      [
+        "Organic clicks",
+        "79",
+        "271"
+      ],
+      [
+        "Impressions",
+        "4.58K",
+        "24.6K"
+      ],
+      [
+        "CTR",
+        "1.7%",
+        "1.1%"
+      ],
+      [
+        "Average position",
+        "39.7",
+        "27.7"
+      ]
+    ],
+    "insight": "Clicks increased by 192, or approximately 243%, while impressions increased more than fivefold. Average position improved by 12 positions. CTR fell by 0.6 percentage points, so the results indicate stronger reach and click volume alongside an opportunity to improve click-through performance.",
+    "limit": "This is organic Search Console performance, not a Google Maps or Business Profile report. The screenshot does not identify the exact local market, establish enquiries or sales, or explain the lower CTR without query-level analysis.",
+    "lesson": "Connect local commercial intent with the landing-page experience, then evaluate visibility, clicks and CTR together to decide what should be optimized next."
+  }
+}
