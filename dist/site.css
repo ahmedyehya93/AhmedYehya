@@ -349,8 +349,7 @@ tbody tr:hover{background:#f7f9fb}
 .case-library h2{font-size:clamp(28px,3.2vw,40px);margin:8px 0 12px}
 .case-library h2 a:hover{color:var(--clicks)}
 .case-library p{color:var(--muted);font-size:17px}
-.case-library strong{display:block;font-size:clamp(30px,3.4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1;margin:22px 0 16px;font-variant-numeric:tabular-nums}
-.case-library small{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0;margin-inline-start:6px}
+.case-library .project-result{margin:22px 0 16px;padding-top:0;border-top:0}
 
 /* ---------- Dialogs ---------- */
 dialog{border:0;border-radius:var(--r-m);padding:28px;background:var(--surface);color:var(--ink);width:min(900px,94vw);max-height:90vh;overflow:auto}
