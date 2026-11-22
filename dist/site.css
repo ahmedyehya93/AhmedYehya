@@ -30,8 +30,8 @@ em{font-style:normal}
 .skip:focus{top:12px}
 
 /* ---------- Header ---------- */
-header{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:32px;height:76px;padding:0 var(--gutter);background:rgba(242,244,247,.86);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:height .35s var(--ease),border-color .35s}
-header.is-scrolled{height:64px;border-color:var(--line)}
+header{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:32px;height:76px;padding:0 var(--gutter);background:rgba(242,244,247,.86);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .35s}
+header.is-scrolled{border-color:var(--line)}
 header::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--clicks);transform-origin:left;transform:scaleX(var(--read,0))}
 .brand{display:flex;align-items:center;gap:2px;font-weight:800;font-size:22px;letter-spacing:-.05em;line-height:1}
 .brand span{color:var(--clicks);font-weight:700;transition:transform .3s var(--ease)}
@@ -167,8 +167,8 @@ h2 span,h2 em{display:block;color:var(--muted);font-weight:500}
 .service-card:last-child{border-inline-end:0}
 .service-card::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--surface);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease)}
 .service-card:hover::before{transform:scaleY(1)}
-.service-icon{font-size:36px;line-height:1;color:var(--clicks);margin-bottom:44px;transition:transform .5s var(--ease)}
-.service-card:hover .service-icon{transform:rotate(-10deg) scale(1.12)}
+.service-icon{display:grid;place-items:center;width:52px;height:52px;align-self:flex-start;border-radius:var(--r-m);background:var(--clicks-soft);color:var(--clicks);margin-bottom:32px}
+.service-icon svg{width:26px;height:26px;display:block}
 .service-card .tag{display:none}
 .service-card h3{font-size:32px;margin-bottom:12px}
 .service-card h4{font-size:18px;font-weight:600;line-height:1.4;margin:0 0 10px;color:var(--ink-2)}
@@ -391,8 +391,7 @@ dialog.image-dialog{width:min(1180px,96vw);padding:20px}
   .perf{max-width:620px}
   .section-head{grid-template-columns:1fr}
   .service-grid{grid-template-columns:1fr}
-  .service-card{border-inline-end:0;border-bottom:1px solid var(--line);padding-inline:0}
-  .service-card::before{inset:0 calc(-1 * var(--gutter))}
+  .service-card{border-inline-end:0;border-bottom:1px solid var(--line);padding-inline:20px}
   .service-icon{margin-bottom:24px}
   .steps{grid-template-columns:1fr 1fr}
   .about,.contact-layout,.service-overview,.service-proof,.delivery{grid-template-columns:1fr}
@@ -405,7 +404,6 @@ dialog.image-dialog{width:min(1180px,96vw);padding:20px}
 }
 @media (max-width:760px){
   header{gap:12px;height:68px}
-  header.is-scrolled{height:60px}
   .brand small{display:none}
   .menu-toggle{display:block}
   nav{display:none}
