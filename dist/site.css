@@ -679,12 +679,12 @@ html[lang="ar"] .hero h1 {
   place-items: center;
   padding: clamp(12px, 3vw, 24px);
   background: var(--paper);
-  animation: intro-exit .25s 1.75s both;
+  animation: intro-exit .25s 2.45s both;
 }
 
 .intro-panel {
   position: relative;
-  width: min(100%, 680px, 145vh);
+  width: min(100%, 960px, 175vh);
   aspect-ratio: 2 / 1;
   display: grid;
   align-items: center;
@@ -706,6 +706,7 @@ html[lang="ar"] .hero h1 {
 .intro-chart svg {
   display: block;
   width: 100%;
+  height: clamp(170px, 28vh, 350px);
 }
 
 .intro-legend {
@@ -739,12 +740,12 @@ html[lang="ar"] .hero h1 {
   display: grid;
   justify-items: center;
   gap: 6px;
-  font-size: clamp(30px, 6vw, 46px);
+  font-size: clamp(34px, 6vw, 54px);
   animation: intro-reveal .32s 1.12s var(--ease) both;
 }
 
 .intro-signature img {
-  width: clamp(88px, 17vw, 120px);
+  width: clamp(142px, 22vw, 200px);
   height: auto;
 }
 
