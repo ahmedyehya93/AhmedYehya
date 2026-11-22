@@ -40,7 +40,6 @@
       ]
     ],
     "insight": "Clicks approximately doubled (+103%), while impressions grew by about 83%. CTR also increased by 0.2 percentage points. Together, these figures show that growth came with both greater visibility and a slightly stronger click-through rate; the comparatively small change in average position does not explain the whole story.",
-    "limit": "This is a before-and-after comparison, not a controlled experiment. The screenshot does not isolate the effect of each change or show enquiry, appointment or revenue outcomes.",
     "lesson": "Look beyond rankings alone. When a site already has visibility, search-result presentation and on-site experience can be useful parts of the same improvement plan."
   },
   "2": {
@@ -84,7 +83,6 @@
       ]
     ],
     "insight": "The comparison records 621 additional clicks—approximately 21 times the starting total. Impressions expanded substantially and average position improved by 17.2 positions. This combination is consistent with a much stronger search presence following the recovery work.",
-    "limit": "The 652 figure is Search Console clicks, not GA4 sessions or leads. Average position of 6.8 is an aggregate across search appearances and does not mean every keyword ranks in the top ten.",
     "lesson": "Fix discovery constraints and relevance together. Technical access gives useful pages a better opportunity to be found; intent alignment gives those pages a clearer reason to compete."
   },
   "3": {
@@ -128,7 +126,6 @@
       ]
     ],
     "insight": "Clicks increased by approximately 238% and impressions by approximately 419%. Visibility grew faster than clicks, while CTR fell from 1.5% to 1.0%. The outcome therefore shows wider search exposure and more clicks, but also identifies click-through performance as an area worth investigating.",
-    "limit": "The screenshot cannot establish why CTR fell. Changes in query mix, position and search-result presentation would need query-level investigation. It also does not show appointment bookings or independently verify medical authority.",
     "lesson": "Read growth metrics together. A larger footprint can be a valuable result while still revealing the next optimization opportunity in CTR and query relevance."
   },
   "1": {
@@ -172,7 +169,6 @@
       ]
     ],
     "insight": "The site established 434 clicks and 23.3K impressions in the later three-month period, with a 1.9% CTR. Average position was 7.6 across the recorded search appearances. These provide an initial measurable search baseline for subsequent optimization.",
-    "limit": "Percentage growth is not meaningful when the starting count is zero. The screenshot does not demonstrate an instant ranking timeline, prove that all keywords rank on page one, or establish sales performance.",
     "lesson": "For a new website, first establish a measurable baseline. Evaluate the relevance of visibility and clicks before making broad claims about growth or commercial success."
   },
   "0": {
@@ -216,7 +212,6 @@
       ]
     ],
     "insight": "Clicks increased by 192, or approximately 243%, while impressions increased more than fivefold. Average position improved by 12 positions. CTR fell by 0.6 percentage points, so the results indicate stronger reach and click volume alongside an opportunity to improve click-through performance.",
-    "limit": "This is organic Search Console performance, not a Google Maps or Business Profile report. The screenshot does not identify the exact local market, establish enquiries or sales, or explain the lower CTR without query-level analysis.",
     "lesson": "Connect local commercial intent with the landing-page experience, then evaluate visibility, clicks and CTR together to decide what should be optimized next."
   }
 }
