@@ -502,7 +502,7 @@ dialog.image-dialog{width:min(1180px,96vw);padding:20px}
   height: 100%;
   min-height: 0;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 15%;
 }
 
 .hero-portrait-photo::after {
