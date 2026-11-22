@@ -4,6 +4,8 @@ const autoplay = document.querySelector('#project-autoplay');
 const rotationDelay = 30_000;
 let rotationEnabled = !reduce;
 let timer;
+let targetIndex = null;
+let settleTimer;
 let inView = !('IntersectionObserver' in window);
 let hovering = false;
 let pointerActive = false;
@@ -25,7 +27,9 @@ function update() {
 }
 function move(step) {
   const cards = [...track.children];
-  go((currentCard(cards) + step + cards.length) % cards.length);
+  if (cards.length < 2) return;
+  const index = targetIndex ?? currentCard(cards);
+  go((index + step + cards.length) % cards.length);
   scheduleRotation();
 }
 prev.onclick = () => move(-1);
@@ -36,15 +40,37 @@ track.addEventListener('keydown', event => {
     move(direction * (event.key === 'ArrowRight' ? 1 : -1));
   }
 });
-track.addEventListener('scroll', update, {passive:true});
+track.addEventListener('scroll', () => {
+  if (targetIndex !== null) waitForScrollToSettle();
+  update();
+}, {passive:true});
 new ResizeObserver(update).observe(track);
-new MutationObserver(() => { track.scrollLeft = 0; buildDots(); update(); }).observe(track, {childList:true});
+new MutationObserver(() => {
+  clearScrollTarget();
+  track.scrollTo({left: 0, behavior: 'instant'});
+  buildDots();
+  update();
+}).observe(track, {childList:true});
 const dots=document.createElement('div');dots.className='carousel-dots';dots.setAttribute('role','group');dots.setAttribute('aria-label',rtl?'اختر دراسة حالة':'Choose a case study');track.after(dots);
 let gesture=null,suppressUntil=0;
 function go(index) {
   const cards = [...track.children];
-  const card = cards[Math.max(0, Math.min(cards.length - 1, index))];
-  if (card) track.scrollBy({left: cardOffset(card), behavior});
+  if (!cards.length) return;
+  const nextIndex = Math.max(0, Math.min(cards.length - 1, index));
+  const left = track.scrollLeft + cardOffset(cards[nextIndex]);
+  targetIndex = nextIndex;
+  track.scrollTo({left, behavior});
+  waitForScrollToSettle();
+}
+
+function clearScrollTarget() {
+  clearTimeout(settleTimer);
+  targetIndex = null;
+}
+
+function waitForScrollToSettle() {
+  clearTimeout(settleTimer);
+  settleTimer = setTimeout(clearScrollTarget, 180);
 }
 function buildDots() {
   dots.replaceChildren();
@@ -87,7 +113,12 @@ track.addEventListener('pointerenter', event => {
   }
 });
 track.addEventListener('pointerleave', () => { hovering = false; scheduleRotation(); });
-track.addEventListener('pointerdown', () => { pointerActive = true; scheduleRotation(); });
+track.addEventListener('pointerdown', () => {
+  clearScrollTarget();
+  pointerActive = true;
+  scheduleRotation();
+});
+track.addEventListener('wheel', clearScrollTarget, {passive:true});
 function releasePointer() {
   pointerActive = false;
   scheduleRotation();
