@@ -33,10 +33,9 @@ em{font-style:normal}
 header{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:32px;height:76px;padding:0 var(--gutter);background:rgba(242,244,247,.86);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .35s}
 header.is-scrolled{border-color:var(--line)}
 header::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--clicks);transform-origin:left;transform:scaleX(var(--read,0))}
-.brand{display:flex;align-items:center;gap:2px;font-weight:800;font-size:22px;letter-spacing:-.05em;line-height:1}
-.brand span{color:var(--clicks);font-weight:700;transition:transform .3s var(--ease)}
-.brand:hover span{transform:translate(2px,-2px)}
-.brand small{font-size:15px;font-weight:600;letter-spacing:-.01em;color:var(--ink-2);margin-inline-start:12px}
+.brand{display:flex;align-items:center;gap:9px;line-height:1}
+.brand-mark{display:block;flex:none;width:34px;height:34px}
+.brand small{font-size:15px;font-weight:700;letter-spacing:-.01em;color:var(--ink-2)}
 nav{display:flex;gap:28px;margin-inline-start:auto;font-size:15px;font-weight:500;color:var(--ink-2)}
 nav a{position:relative;padding:6px 0}
 nav a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--clicks);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -670,4 +669,85 @@ html[lang="ar"] .hero h1 {
 
 .about-work h3 a:hover {
   color: var(--clicks);
+}
+
+.site-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: var(--paper);
+  animation: intro-exit .22s 1.22s both;
+}
+
+.intro-panel {
+  position: relative;
+  width: min(100%, 480px);
+  aspect-ratio: 2 / 1;
+  display: grid;
+  align-items: center;
+}
+
+.intro-chart,
+.intro-signature {
+  grid-area: 1 / 1;
+}
+
+.intro-chart {
+  padding: clamp(16px, 4vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  background: var(--surface);
+  animation: intro-fold .32s .64s var(--ease) both;
+}
+
+.intro-chart svg {
+  display: block;
+  width: 100%;
+}
+
+.intro-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clicks);
+}
+
+.intro-legend span:last-child {
+  color: var(--impr);
+}
+
+.intro-grid {
+  stroke: var(--line);
+}
+
+.intro-trend {
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  animation: intro-draw .64s ease-out both;
+}
+
+.intro-impressions { stroke: var(--impr); }
+.intro-clicks { stroke: var(--clicks); }
+
+.intro-signature {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  font-size: clamp(24px, 5vw, 36px);
+  animation: intro-reveal .26s .8s var(--ease) both;
+}
+
+@keyframes intro-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes intro-fold { to { opacity: 0; transform: scale(.18); } }
+@keyframes intro-reveal { from { opacity: 0; transform: scale(.85); } }
+@keyframes intro-exit { to { opacity: 0; visibility: hidden; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-intro { display: none; }
 }
