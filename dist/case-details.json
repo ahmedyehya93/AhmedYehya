@@ -2,19 +2,19 @@
   "4": {
     "domain": "bedayaccpa.com",
     "intro": "A healthcare platform with an established search presence, but room to turn its existing exposure into more organic clicks. The project combined search-result presentation, structured data and mobile experience improvements.",
-    "challenge": "The site was operating in a competitive medical search landscape. In the previous three-month period shown in Search Console, it recorded 53.6K clicks and 2.76M impressions, with a 1.9% CTR. The opportunity was not simply to chase more rankings: it was to improve how the site appeared in search while strengthening the experience after the click.",
+    "challenge": "Bedaya Health started with 53.6K clicks, 2.76M impressions and a 1.9% CTR over three months. I focused on how its medical pages appeared in search and how they loaded on mobile.",
     "steps": [
       [
         "Improve the search-result message",
-        "Titles and meta descriptions were refined to better communicate the relevance of medical pages. This work targeted the gap between being shown in search and earning a click, rather than treating impressions alone as the goal."
+        "I rewrote titles and meta descriptions to show what each medical page covered."
       ],
       [
         "Add relevant structured data",
-        "The published work included MedicalWebPage and FAQ structured data. The purpose was to describe page content more clearly to search engines. Implementation alone does not establish that a rich result appeared or caused the measured growth."
+        "I added MedicalWebPage and FAQ structured data to describe the content on relevant pages."
       ],
       [
         "Address the mobile experience",
-        "The technical work addressed Largest Contentful Paint and Cumulative Layout Shift. These priorities focused on loading experience and layout stability, alongside the changes to search-result presentation."
+        "I worked on Largest Contentful Paint and Cumulative Layout Shift to improve loading and layout stability on mobile."
       ]
     ],
     "metrics": [
@@ -39,25 +39,25 @@
         "8.1"
       ]
     ],
-    "insight": "Clicks approximately doubled (+103%), while impressions grew by about 83%. CTR also increased by 0.2 percentage points. Together, these figures show that growth came with both greater visibility and a slightly stronger click-through rate; the comparatively small change in average position does not explain the whole story.",
-    "lesson": "Look beyond rankings alone. When a site already has visibility, search-result presentation and on-site experience can be useful parts of the same improvement plan."
+    "insight": "Over the later three-month period, clicks reached 109K (+103%) and impressions reached 5.06M. CTR rose from 1.9% to 2.1%, and average position improved from 8.5 to 8.1.",
+    "lesson": "The project combined changes to search snippets, structured data and the mobile experience across key medical pages."
   },
   "2": {
     "domain": "botsmsg.com",
     "intro": "A technical recovery project for a software and automation website with very limited organic search activity. The focus was on removing discovery barriers and making commercial pages more relevant to the people searching for its solutions.",
-    "challenge": "The comparison starts at 31 organic clicks and 2.53K impressions over three months, with an average position of 24. The original case study identifies indexation barriers as a central issue. That made technical discovery a priority before relying on content alone to generate stronger search performance.",
+    "challenge": "Botsmsg started with 31 clicks and 2.53K impressions over three months, with an average position of 24. I focused on indexing barriers and the pages describing its automation services.",
     "steps": [
       [
         "Audit crawl and discovery issues",
-        "A technical audit was used to identify crawl errors and barriers affecting indexation. The work focused on improving the ability of search engines to discover the site’s important pages. The source does not provide a page-by-page issue log, so specific fixes are not inferred here."
+        "I audited crawl errors and indexing barriers affecting important pages."
       ],
       [
         "Refine the XML sitemap",
-        "The sitemap was optimized to support discovery. This formed part of the technical recovery work; submitting or updating a sitemap is a discovery signal, not a guarantee that every URL will be indexed."
+        "I refined the XML sitemap to help search engines discover important URLs."
       ],
       [
         "Align commercial landing pages with intent",
-        "Landing-page content was refined around searches for automation and chatbot solutions. This connected the technical recovery with pages that better addressed what a prospective customer was looking for."
+        "I updated commercial landing pages around searches for automation and chatbot solutions."
       ]
     ],
     "metrics": [
@@ -82,25 +82,25 @@
         "6.8"
       ]
     ],
-    "insight": "The comparison records 621 additional clicks—approximately 21 times the starting total. Impressions expanded substantially and average position improved by 17.2 positions. This combination is consistent with a much stronger search presence following the recovery work.",
-    "lesson": "Fix discovery constraints and relevance together. Technical access gives useful pages a better opportunity to be found; intent alignment gives those pages a clearer reason to compete."
+    "insight": "In the later three-month period, clicks rose from 31 to 652 and impressions reached 43.8K. Average position improved from 24 to 6.8.",
+    "lesson": "I paired crawl and sitemap work with updates to the pages people use to explore Botsmsg’s services."
   },
   "3": {
     "domain": "dr-kareemshliwa.com",
     "intro": "A medical specialist’s website needed to establish visibility in a landscape occupied by larger healthcare providers. The project organized content around patient questions and connected related topics through internal links.",
-    "challenge": "The earlier three-month period shows 464 clicks and 30.8K impressions. For a specialist profile, the challenge was to build a useful search presence around its area of practice, rather than compete only on broad medical terms. The content approach focused on specific symptoms and procedure-related information needs.",
+    "challenge": "The site started with 464 clicks and 30.8K impressions over three months. I focused on the symptoms and procedures prospective patients search for within the doctor’s specialty.",
     "steps": [
       [
         "Organize a specialty-focused topic map",
-        "The work developed topic clusters around the doctor’s specialty. Grouping related subjects gave the content a clearer structure and helped identify the relationships between individual pages."
+        "I grouped related topics around the doctor’s specialty to give the pages a clear structure."
       ],
       [
         "Connect related content internally",
-        "Internal linking connected relevant pages within the topic structure. The aim was to support navigation and discovery, so that the site’s content functioned as a connected resource rather than a collection of isolated articles."
+        "I linked related pages so readers could move between relevant topics."
       ],
       [
         "Address more specific patient searches",
-        "Content targeted longer, more specific symptom and procedure queries. These searches can represent different stages of a patient’s research, making relevance to the actual question an important part of the content approach."
+        "I targeted specific symptom and procedure queries in the content."
       ]
     ],
     "metrics": [
@@ -125,25 +125,25 @@
         "12.1"
       ]
     ],
-    "insight": "Clicks increased by approximately 238% and impressions by approximately 419%. Visibility grew faster than clicks, while CTR fell from 1.5% to 1.0%. The outcome therefore shows wider search exposure and more clicks, but also identifies click-through performance as an area worth investigating.",
-    "lesson": "Read growth metrics together. A larger footprint can be a valuable result while still revealing the next optimization opportunity in CTR and query relevance."
+    "insight": "Clicks reached 1.57K and impressions reached 160K over the later three-month period. Impressions grew faster than clicks, and CTR moved from 1.5% to 1.0%.",
+    "lesson": "The work gave patient questions a clear place in the site structure and connected them through internal links."
   },
   "1": {
     "domain": "rightnutritions.com",
     "intro": "A new nutrition and supplements website needed to develop its organic search presence in a trust-sensitive category. The work combined evidence-supported content with an internal-linking structure connecting related content and products.",
-    "challenge": "The earlier comparison period has zero recorded clicks and impressions. That makes the objective establishing measurable visibility, rather than calculating percentage growth from a meaningful existing traffic base. The category also called for careful attention to the quality and support behind health-related content.",
+    "challenge": "Right Nutritions started with zero recorded clicks and impressions. I worked on building search visibility for a new nutrition and supplements site through content and internal links.",
     "steps": [
       [
         "Focus on evidence-supported content",
-        "The published approach emphasized scientifically supported content and trust considerations. This meant treating the usefulness and support for the information as part of the optimization work, rather than relying only on keyword coverage."
+        "I focused on nutrition content that used scientific evidence to support health-related information."
       ],
       [
         "Build a hub-and-spoke structure",
-        "Related content was organized around broader topics, with links connecting the hub and supporting pages. This approach created a more coherent structure for users exploring the subject."
+        "I organized related pages around topic hubs and linked each hub to its supporting pages."
       ],
       [
         "Connect relevant content and product pages",
-        "Internal links connected related information with product pages. The intent was to help users and search engines discover relevant pages within the same subject area, without treating every article as a standalone destination."
+        "I linked relevant informational pages to related products."
       ]
     ],
     "metrics": [
@@ -168,25 +168,25 @@
         "7.6"
       ]
     ],
-    "insight": "The site established 434 clicks and 23.3K impressions in the later three-month period, with a 1.9% CTR. Average position was 7.6 across the recorded search appearances. These provide an initial measurable search baseline for subsequent optimization.",
-    "lesson": "For a new website, first establish a measurable baseline. Evaluate the relevance of visibility and clicks before making broad claims about growth or commercial success."
+    "insight": "Search Console recorded 434 clicks and 23.3K impressions in the later three-month period, with a CTR of 1.9% and an average position of 7.6.",
+    "lesson": "The project established a search baseline and gave visitors paths between nutrition topics and related products."
   },
   "0": {
     "domain": "souq-usedfurniture.com",
     "intro": "A local used-furniture website competing for searches with buying and selling intent. The work connected category-page relevance with mobile usability and server-response improvements.",
-    "challenge": "The previous three-month period recorded 79 clicks and 4.58K impressions, with average position 39.7. The original case study describes strong local competition and difficulty reaching high-intent transactional searches. The focus was to make category pages more useful for those searches and improve the mobile experience.",
+    "challenge": "The site started with 79 clicks and 4.58K impressions over three months, with an average position of 39.7. I focused on category pages for people looking to buy or sell used furniture locally.",
     "steps": [
       [
         "Prioritize transactional category searches",
-        "Category pages were optimized around buy/sell intent. This focused the work on what a user trying to transact would need, rather than treating every search as a general informational query."
+        "I optimized category pages around local buying and selling searches."
       ],
       [
         "Improve server response",
-        "Technical improvements addressed server response times as part of the site-experience work. The source does not include a before-and-after speed measurement, so no speed improvement percentage is claimed."
+        "I worked on server response times as part of the technical improvements."
       ],
       [
         "Refine the mobile user experience",
-        "The mobile interface was streamlined to support easier browsing. This complemented the work on category relevance, aligning the search destination with the needs of local visitors."
+        "I simplified the mobile interface to make browsing easier."
       ]
     ],
     "metrics": [
@@ -211,7 +211,7 @@
         "27.7"
       ]
     ],
-    "insight": "Clicks increased by 192, or approximately 243%, while impressions increased more than fivefold. Average position improved by 12 positions. CTR fell by 0.6 percentage points, so the results indicate stronger reach and click volume alongside an opportunity to improve click-through performance.",
-    "lesson": "Connect local commercial intent with the landing-page experience, then evaluate visibility, clicks and CTR together to decide what should be optimized next."
+    "insight": "Clicks reached 271 (+243%) and impressions reached 24.6K over the later three-month period. Average position improved by 12 positions, while CTR fell by 0.6 percentage points.",
+    "lesson": "The work brought the category pages closer to local buying and selling searches and made them easier to browse on mobile."
   }
 }
