@@ -662,3 +662,11 @@ html[lang="ar"] .hero h1 {
 .carousel-dots button.is-active::after {
   left: 12px;
 }
+
+.about-work {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.about-work h3 a:hover {
+  color: var(--clicks);
+}
