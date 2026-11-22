@@ -6,17 +6,6 @@
   const timeline = document.querySelector('.timeline');
   const timelineItems = timeline ? [...timeline.querySelectorAll('article')] : [];
 
-  // Colour metrics by what they measure: blue for clicks, violet for impressions.
-  const kind = text => /growth/i.test(text) ? 'up' : /click/i.test(text) ? 'clicks' : /impression/i.test(text) ? 'impr' : '';
-  document.querySelectorAll('.result-strip > div').forEach(d => {
-    const k = kind(d.querySelector('span')?.textContent || '');
-    if (k) d.dataset.metric = k;
-  });
-  document.querySelectorAll('.case-library strong').forEach(s => {
-    const k = kind(s.querySelector('small')?.textContent || '');
-    if (k) s.dataset.metric = k;
-  });
-
   // Stagger grouped reveals so a row arrives in order rather than all at once.
   document.querySelectorAll('.service-grid, .steps, .timeline, .scope-grid').forEach(group => {
     [...group.children].forEach((child, i) => child.style.setProperty('--delay', `${i * 110}ms`));
@@ -83,7 +72,7 @@
       if (el.dataset.watched) return;
       el.dataset.watched = '1';
       // A rank counting upwards reads as getting worse, so positions stay still.
-      if (/position/i.test(el.parentElement.textContent.replace(el.textContent, ''))) return;
+      if (el.closest('[data-metric="position"]')) return;
       io ? io.observe(el) : countUp(el);
     });
   }
