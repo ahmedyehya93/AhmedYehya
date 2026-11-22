@@ -1,15 +1,6 @@
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || document.hidden) return;
 
-  const key = 'ay-portfolio-intro';
-  const isReload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
-  try {
-    if (!isReload && sessionStorage.getItem(key)) return;
-    sessionStorage.setItem(key, 'seen');
-  } catch {
-    return;
-  }
-
   const arabic = document.documentElement.lang === 'ar';
   const logo = new URL('assets/seo-lens.svg', document.currentScript.src).href;
   const intro = document.createElement('div');
