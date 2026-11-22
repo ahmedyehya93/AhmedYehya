@@ -607,3 +607,61 @@ html[lang="ar"] .hero h1 {
     display: none;
   }
 }
+
+.carousel-controls {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 12px;
+}
+
+.carousel-controls .carousel-caption {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+}
+
+.carousel-caption small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.carousel-controls .carousel-buttons {
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.carousel-buttons button {
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.carousel-buttons #project-next:not(:disabled) {
+  background: var(--clicks);
+  border-color: var(--clicks);
+  color: white;
+}
+
+.carousel-buttons #project-autoplay {
+  background: transparent;
+}
+
+.projects .project {
+  flex-basis: calc(100% - 4px);
+}
+
+.carousel-dots button {
+  width: 44px;
+  height: 44px;
+}
+
+.carousel-dots button::after {
+  inset: 18px auto auto 18px;
+}
+
+.carousel-dots button.is-active::after {
+  left: 12px;
+}

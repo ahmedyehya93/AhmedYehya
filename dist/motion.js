@@ -1,5 +1,12 @@
 (()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');if(menu&&nav){menu.onclick=()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open)};nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}})}if(!reduce&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.section-head,.service-card,.steps>div,.timeline article,.service-overview,.scope-grid article,.delivery,.service-proof,.faq').forEach(el=>{el.classList.add('reveal');io.observe(el)})}const track=document.querySelector('#projects');if(track){const prev=document.querySelector('#project-prev'),next=document.querySelector('#project-next'),status=document.querySelector('#carousel-status');const rtl = document.documentElement.dir === 'rtl';
 const direction = rtl ? -1 : 1;
+const autoplay = document.querySelector('#project-autoplay');
+const rotationDelay = 30_000;
+let rotationEnabled = !reduce;
+let timer;
+let inView = !('IntersectionObserver' in window);
+let hovering = false;
+let pointerActive = false;
 const behavior = reduce ? 'instant' : 'smooth';
 const endReached = () => Math.abs(track.scrollLeft) + track.clientWidth >= track.scrollWidth - 3;
 function cardOffset(card) {
@@ -12,13 +19,14 @@ function nearestCard(cards) {
     Math.abs(cardOffset(card)) < Math.abs(cardOffset(cards[best])) ? index : best, 0);
 }
 function update() {
-  prev.disabled = Math.abs(track.scrollLeft) <= 2;
-  next.disabled = endReached();
+  prev.disabled = next.disabled = track.childElementCount < 2;
   updateDots();
+  scheduleRotation();
 }
 function move(step) {
   const cards = [...track.children];
-  go(nearestCard(cards) + step);
+  go((currentCard(cards) + step + cards.length) % cards.length);
+  scheduleRotation();
 }
 prev.onclick = () => move(-1);
 next.onclick = () => move(1);
@@ -31,7 +39,6 @@ track.addEventListener('keydown', event => {
 track.addEventListener('scroll', update, {passive:true});
 new ResizeObserver(update).observe(track);
 new MutationObserver(() => { track.scrollLeft = 0; buildDots(); update(); }).observe(track, {childList:true});
-const hint=document.createElement('span');hint.className='drag-hint';hint.textContent=rtl?'اسحب لاستعراض المشاريع':'Hold & drag to explore';document.querySelector('.carousel-controls').prepend(hint);
 const dots=document.createElement('div');dots.className='carousel-dots';dots.setAttribute('role','group');dots.setAttribute('aria-label',rtl?'اختر دراسة حالة':'Choose a case study');track.after(dots);
 let gesture=null,suppressUntil=0;
 function go(index) {
@@ -49,9 +56,58 @@ function buildDots() {
     dots.append(button);
   });
 }
+function currentCard(cards) {
+  return endReached() ? Math.max(0, cards.length - 1) : nearestCard(cards);
+}
+
+function scheduleRotation() {
+  clearTimeout(timer);
+  if (!rotationEnabled || !inView || document.hidden || hovering || pointerActive ||
+      track.contains(document.activeElement) || track.childElementCount < 2) return;
+  timer = setTimeout(() => move(1), rotationDelay);
+}
+
+function updateAutoplayButton() {
+  autoplay.textContent = rotationEnabled
+    ? (rtl ? 'إيقاف العرض التلقائي' : 'Pause autoplay')
+    : (rtl ? 'تشغيل العرض التلقائي' : 'Start autoplay');
+}
+
+autoplay.hidden = false;
+autoplay.addEventListener('click', () => {
+  rotationEnabled = !rotationEnabled;
+  updateAutoplayButton();
+  scheduleRotation();
+});
+updateAutoplayButton();
+track.addEventListener('pointerenter', event => {
+  if (event.pointerType === 'mouse') {
+    hovering = true;
+    scheduleRotation();
+  }
+});
+track.addEventListener('pointerleave', () => { hovering = false; scheduleRotation(); });
+track.addEventListener('pointerdown', () => { pointerActive = true; scheduleRotation(); });
+function releasePointer() {
+  pointerActive = false;
+  scheduleRotation();
+}
+window.addEventListener('pointerup', releasePointer);
+window.addEventListener('pointercancel', releasePointer);
+window.addEventListener('blur', releasePointer);
+track.addEventListener('focusin', scheduleRotation);
+track.addEventListener('focusout', () => queueMicrotask(scheduleRotation));
+document.addEventListener('visibilitychange', scheduleRotation);
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    scheduleRotation();
+  }, {threshold: .2}).observe(track);
+}
+
 function updateDots() {
   const cards = [...track.children];
-  const index = endReached() ? cards.length - 1 : nearestCard(cards);
+  const index = currentCard(cards);
   status.textContent = rtl ? `${index + 1} من ${cards.length}` : `${index + 1} / ${cards.length}`;
   [...dots.children].forEach((button, position) => {
     button.classList.toggle('is-active', position === index);
