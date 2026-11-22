@@ -15,7 +15,9 @@ Run a static HTTP server from `dist/`, for example `python -m http.server 8000 -
 - `dist/case-details.json`: extended case studies, comparisons and interpretation.
 - `dist/cases.json`: original case-study source URLs.
 - `dist/assets/case-*.jpg`: original Search Console screenshots (some are PNG files served under the existing asset filenames).
-- `dist/style.css`: responsive design.
+- `dist/site.css`: the single stylesheet for every page (responsive layout, metric colours, motion).
+- `dist/motion.js`: menu, scroll reveal and the case-study carousel.
+- `dist/anim.js`: counters, header and reading progress, career timeline and case-study contents highlighting. All motion respects reduced-motion settings.
 - `dist/thanks.html`: return page after contact submission.
 
 ## Contact setup
