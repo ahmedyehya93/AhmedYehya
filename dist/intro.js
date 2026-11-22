@@ -25,7 +25,7 @@
         </svg>
       </div>
       <div class="intro-signature">
-        <img src="${logo}" width="76" height="76" alt="">
+        <img src="${logo}" width="120" height="120" alt="">
         <strong>${arabic ? 'أحمد يحيى' : 'Ahmed Yehya'}</strong>
       </div>
     </div>`;
@@ -42,6 +42,6 @@
   intro.addEventListener('pointerdown', dismiss, {once: true});
   window.addEventListener('keydown', dismiss, {once: true});
   window.addEventListener('pagehide', dismiss, {once: true});
-  window.setTimeout(dismiss, 1800);
+  window.setTimeout(dismiss, 2400);
   document.body.prepend(intro);
 })();

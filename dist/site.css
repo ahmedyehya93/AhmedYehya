@@ -677,14 +677,14 @@ html[lang="ar"] .hero h1 {
   z-index: 100;
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: clamp(12px, 3vw, 24px);
   background: var(--paper);
-  animation: intro-exit .22s 1.22s both;
+  animation: intro-exit .25s 1.75s both;
 }
 
 .intro-panel {
   position: relative;
-  width: min(100%, 480px);
+  width: min(100%, 680px, 145vh);
   aspect-ratio: 2 / 1;
   display: grid;
   align-items: center;
@@ -700,7 +700,7 @@ html[lang="ar"] .hero h1 {
   border: 1px solid var(--line);
   border-radius: var(--r-m);
   background: var(--surface);
-  animation: intro-fold .32s .64s var(--ease) both;
+  animation: intro-fold .38s .94s var(--ease) both;
 }
 
 .intro-chart svg {
@@ -729,7 +729,7 @@ html[lang="ar"] .hero h1 {
   stroke-linejoin: round;
   stroke-linecap: round;
   stroke-dasharray: 1;
-  animation: intro-draw .64s ease-out both;
+  animation: intro-draw .94s ease-out both;
 }
 
 .intro-impressions { stroke: var(--impr); }
@@ -739,8 +739,13 @@ html[lang="ar"] .hero h1 {
   display: grid;
   justify-items: center;
   gap: 6px;
-  font-size: clamp(24px, 5vw, 36px);
-  animation: intro-reveal .26s .8s var(--ease) both;
+  font-size: clamp(30px, 6vw, 46px);
+  animation: intro-reveal .32s 1.12s var(--ease) both;
+}
+
+.intro-signature img {
+  width: clamp(88px, 17vw, 120px);
+  height: auto;
 }
 
 @keyframes intro-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
