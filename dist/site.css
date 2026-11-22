@@ -643,7 +643,7 @@ html[lang="ar"] .hero h1 {
   color: white;
 }
 
-.carousel-buttons #project-autoplay {
+.carousel-buttons #project-autoplay:not(:hover) {
   background: transparent;
 }
 

@@ -1,7 +1,7 @@
 (()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');if(menu&&nav){menu.onclick=()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open)};nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}})}if(!reduce&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.section-head,.service-card,.steps>div,.timeline article,.service-overview,.scope-grid article,.delivery,.service-proof,.faq').forEach(el=>{el.classList.add('reveal');io.observe(el)})}const track=document.querySelector('#projects');if(track){const prev=document.querySelector('#project-prev'),next=document.querySelector('#project-next'),status=document.querySelector('#carousel-status');const rtl = document.documentElement.dir === 'rtl';
 const direction = rtl ? -1 : 1;
 const autoplay = document.querySelector('#project-autoplay');
-const rotationDelay = 30_000;
+const rotationDelay = 10_000;
 let rotationEnabled = !reduce;
 let timer;
 let targetIndex = null;
